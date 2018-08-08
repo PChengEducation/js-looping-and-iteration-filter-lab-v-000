@@ -4,3 +4,9 @@ function findMatching(drivers, name){
     return name.toLowerCase() === driverName.toLowerCase()
   });
 };
+
+function fuzzyMatch(drivers, letters){
+  return drivers.filter(function(driverName){
+    return driverName.slice(0, letters.length) === letters;
+  });
+};
